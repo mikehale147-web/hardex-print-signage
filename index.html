@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hardez Print & Signage | Abuja</title>
+  <!-- Font Awesome 6 (free) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #ffffff;
+      color: #1a1a1a;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* header / nav */
+    .header {
+      padding: 20px 0;
+      border-bottom: 1px solid #eaeaea;
+      position: relative;
+      z-index: 10;
+      background: white;
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 1.8rem;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+      color: #0f0f0f;
+    }
+
+    .logo span {
+      color: #c8102e;
+    }
+
+    .contact-cta a {
+      background: #c8102e;
+      color: white;
+      padding: 10px 22px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      transition: background 0.2s ease;
+    }
+
+    .contact-cta a:hover {
+      background: #a00d24;
+    }
+
+    /* hero */
+    .hero {
+      padding: 60px 0 50px;
+      background: linear-gradient(145deg, #fafafa 0%, #ffffff 100%);
+    }
+
+    .hero-grid {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .hero-content {
+      flex: 1 1 300px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: #f0f0f0;
+      color: #333;
+      font-weight: 600;
+      font-size: 0.8rem;
+      letter-spacing: 0.5px;
+      padding: 6px 14px;
+      border-radius: 30px;
+      margin-bottom: 24px;
+      text-transform: uppercase;
+    }
+
+    .hero-content h1 {
+      font-size: 3.2rem;
+      font-weight: 800;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      margin-bottom: 20px;
+      color: #111;
+    }
+
+    .hero-highlight {
+      color: #c8102e;
+      border-bottom: 4px solid rgba(200, 16, 46, 0.15);
+    }
+
+    .hero-desc {
+      font-size: 1.2rem;
+      color: #4a4a4a;
+      margin-bottom: 32px;
+      max-width: 500px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .btn-primary {
+      background: #c8102e;
+      color: white;
+      padding: 14px 34px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1rem;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s ease, transform 0.1s ease;
+      border: none;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover {
+      background: #a00d24;
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #111;
+      border: 2px solid #111;
+      padding: 12px 30px;
+      border-radius: 60px;
+      text-decoration: none;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-outline:hover {
+      background: #111;
+      color: white;
+    }
+
+    .hero-visual {
+      flex: 1 1 300px;
+      background: #f3f3f3;
+      border-radius: 32px;
+      padding: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      box-shadow: 0 20px 35px -8px rgba(0, 0, 0, 0.08);
+    }
+
+    .sign-card {
+      background: white;
+      border-radius: 18px;
+      padding: 22px 26px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.02);
+      border: 1px solid #ececec;
+      display: flex;
+      align-items: center;
+      gap: 18px;
+    }
+
+    .sign-icon {
+      background: #c8102e10;
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #c8102e;
+      font-size: 1.8rem;
+    }
+
+    .sign-text h4 {
+      font-weight: 700;
+      font-size: 1.2rem;
+      margin-bottom: 4px;
+    }
+
+    .sign-text p {
+      color: #666;
+      font-size: 0.95rem;
+    }
+
+    /* info bar */
+    .info-bar {
+      background: #111;
+      color: white;
+      padding: 18px 0;
+      margin: 30px 0 0;
+    }
+
+    .info-items {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .info-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1rem;
+    }
+
+    .info-item i {
+      color: #c8102e;
+      font-size: 1.3rem;
+      width: 24px;
+      text-align: center;
+    }
+
+    .info-item a {
+      color: white;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .info-item a:hover {
+      color: #ffb3b3;
+    }
+
+    /* services */
+    .services {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.2rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin-bottom: 16px;
+    }
+
+    .section-sub {
+      text-align: center;
+      color: #666;
+      max-width: 600px;
+      margin: 0 auto 56px;
+      font-size: 1.1rem;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #fafafa;
+      padding: 32px 24px;
+      border-radius: 28px;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      border: 1px solid #f0f0f0;
+    }
+
+    .service-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 30px -10px rgba(0, 0, 0, 0.05);
+      border-color: #e0e0e0;
+    }
+
+    .service-icon {
+      font-size: 2.4rem;
+      color: #c8102e;
+      margin-bottom: 22px;
+    }
+
+    .service-card h3 {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .service-card p {
+      color: #555;
+      font-size: 0.98rem;
+      line-height: 1.6;
+    }
+
+    /* ===== GALLERY / SLIDESHOW ===== */
+    .gallery-section {
+      padding: 80px 0;
+      background: #f7f7f7;
+      border-top: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .gallery-container {
+      position: relative;
+      max-width: 1000px;
+      margin: 0 auto;
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 25px 40px -15px rgba(0, 0, 0, 0.15);
+    }
+
+    .slideshow {
+      position: relative;
+      width: 100%;
+      height: 450px;
+      background: #111;
+    }
+
+    .slide {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: opacity 0.8s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 1.5rem;
+      text-align: center;
+    }
+
+    .slide.active {
+      opacity: 1;
+      z-index: 2;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .slide-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+    }
+
+    .slide-content i {
+      font-size: 4rem;
+      opacity: 0.9;
+      color: #c8102e;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 20px;
+      border-radius: 50%;
+    }
+
+    .slide-content h3 {
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+    }
+
+    .slide-content p {
+      font-size: 1.1rem;
+      color: #ccc;
+      max-width: 500px;
+    }
+
+    /* Slide buttons */
+    .slide-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.9);
+      border: none;
+      color: #111;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      z-index: 10;
+      transition: background 0.2s ease, transform 0.2s ease;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    .slide-btn:hover {
+      background: white;
+      transform: translateY(-50%) scale(1.05);
+    }
+
+    .slide-btn.prev {
+      left: 20px;
+    }
+
+    .slide-btn.next {
+      right: 20px;
+    }
+
+    /* Dots */
+    .slide-dots {
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 12px;
+      z-index: 10;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.5);
+      border: none;
+      cursor: pointer;
+      transition: background 0.3s ease, transform 0.2s ease;
+      padding: 0;
+    }
+
+    .dot.active {
+      background: #c8102e;
+      transform: scale(1.2);
+    }
+
+    .dot:hover {
+      background: rgba(255, 255, 255, 0.9);
+    }
+
+    /* ===== YOUTUBE VIDEO GALLERY ===== */
+    .video-section {
+      padding: 80px 0;
+      background: #ffffff;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 32px;
+      margin-top: 20px;
+    }
+
+    .video-card {
+      background: #fafafa;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 25px -10px rgba(0, 0, 0, 0.1);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      border: 1px solid #f0f0f0;
+    }
+
+    .video-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.15);
+    }
+
+    .video-wrapper {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+      height: 0;
+      overflow: hidden;
+      background: #000;
+    }
+
+    .video-wrapper iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+
+    .video-info {
+      padding: 18px 22px 20px;
+    }
+
+    .video-info h4 {
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: #111;
+    }
+
+    .video-info p {
+      font-size: 0.9rem;
+      color: #666;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .video-info i {
+      color: #c8102e;
+      font-size: 0.85rem;
+    }
+
+    /* location / address */
+    .location-section {
+      background: #f7f7f7;
+      padding: 70px 0;
+      border-top: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+    }
+
+    .location-grid {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      flex-wrap: wrap;
+    }
+
+    .location-text {
+      flex: 1 1 280px;
+    }
+
+    .location-text h2 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+      letter-spacing: -0.01em;
+    }
+
+    .address-block {
+      display: flex;
+      gap: 18px;
+      margin: 28px 0;
+      background: white;
+      padding: 24px 26px;
+      border-radius: 24px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+    }
+
+    .address-icon {
+      color: #c8102e;
+      font-size: 1.8rem;
+      line-height: 1;
+    }
+
+    .address-details p {
+      font-size: 1.05rem;
+      color: #2d2d2d;
+      margin-bottom: 6px;
+    }
+
+    .address-details strong {
+      font-weight: 700;
+    }
+
+    .phone-block {
+      display: flex;
+      gap: 18px;
+      margin: 20px 0 28px;
+      background: white;
+      padding: 24px 26px;
+      border-radius: 24px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.02);
+    }
+
+    .phone-icon {
+      color: #c8102e;
+      font-size: 1.8rem;
+    }
+
+    .phone-number {
+      font-size: 1.5rem;
+      font-weight: 800;
+      letter-spacing: 1px;
+      color: #111;
+      text-decoration: none;
+    }
+
+    .phone-number:hover {
+      color: #c8102e;
+    }
+
+    .map-visual {
+      flex: 1 1 300px;
+      background: #e5e5e5;
+      border-radius: 32px;
+      overflow: hidden;
+      box-shadow: 0 20px 30px -8px rgba(0, 0, 0, 0.1);
+      height: 280px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      background-image: radial-gradient(circle at 30% 40%, #ddd 1px, transparent 1px);
+      background-size: 20px 20px;
+    }
+
+    .map-placeholder {
+      background: white;
+      padding: 18px 28px;
+      border-radius: 60px;
+      font-weight: 600;
+      color: #222;
+      box-shadow: 0 8px 18px rgba(0,0,0,0.05);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 1.1rem;
+      z-index: 2;
+    }
+
+    .map-placeholder i {
+      color: #c8102e;
+      font-size: 1.4rem;
+    }
+
+    /* footer */
+    .footer {
+      background: #0d0d0d;
+      color: #bbb;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .footer .logo {
+      color: white;
+      font-size: 1.8rem;
+    }
+
+    .footer .logo span {
+      color: #c8102e;
+    }
+
+    .footer-contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 28px;
+      font-size: 0.95rem;
+    }
+
+    .footer-contact a {
+      color: #ddd;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: color 0.2s;
+    }
+
+    .footer-contact a:hover {
+      color: #c8102e;
+    }
+
+    .copyright {
+      font-size: 0.85rem;
+      color: #777;
+      border-top: 1px solid #222;
+      padding-top: 24px;
+      margin-top: 16px;
+    }
+
+    /* ===== FLOATING WHATSAPP BUTTON ===== */
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      background: #25D366;
+      color: white;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.2rem;
+      box-shadow: 0 6px 18px rgba(37, 211, 102, 0.4);
+      z-index: 1000;
+      text-decoration: none;
+      transition: all 0.25s ease;
+      border: 2px solid white;
+    }
+
+    .whatsapp-float:hover {
+      background: #1ebe5a;
+      transform: scale(1.08);
+      box-shadow: 0 10px 24px rgba(37, 211, 102, 0.5);
+    }
+
+    .whatsapp-float::before {
+      content: "Chat with us";
+      position: absolute;
+      right: 75px;
+      background: #111;
+      color: white;
+      font-size: 0.8rem;
+      font-weight: 600;
+      padding: 6px 12px;
+      border-radius: 30px;
+      white-space: nowrap;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+
+    .whatsapp-float:hover::before {
+      opacity: 1;
+    }
+
+    /* Mobile adjustments */
+    @media (max-width: 700px) {
+      .hero-content h1 {
+        font-size: 2.3rem;
+      }
+      .hero-desc {
+        font-size: 1rem;
+      }
+      .info-items {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .hero-grid {
+        gap: 30px;
+      }
+      .location-grid {
+        flex-direction: column;
+      }
+      .whatsapp-float {
+        width: 54px;
+        height: 54px;
+        font-size: 2rem;
+        bottom: 20px;
+        right: 20px;
+      }
+      .whatsapp-float::before {
+        display: none;
+      }
+      .slideshow {
+        height: 320px;
+      }
+      .slide-content h3 {
+        font-size: 1.5rem;
+      }
+      .slide-content i {
+        font-size: 3rem;
+        padding: 16px;
+      }
+      .slide-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero-content h1 {
+        font-size: 1.9rem;
+      }
+      .btn-primary, .btn-outline {
+        width: 100%;
+        justify-content: center;
+      }
+      .header-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .slideshow {
+        height: 260px;
+      }
+      .slide-content h3 {
+        font-size: 1.2rem;
+      }
+      .slide-content p {
+        font-size: 0.85rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container header-inner">
+      <div class="logo">HARDEZ <span>PRINT & SIGNAGE</span></div>
+      <div class="contact-cta">
+        <a href="tel:08135776918"><i class="fas fa-phone-alt"></i> 0813 577 6918</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-content">
+        <div class="hero-badge"><i class="fas fa-check-circle" style="margin-right: 6px;"></i> Abuja's trusted print partner</div>
+        <h1>Make a <span class="hero-highlight">bold statement</span> with premium print & signage.</h1>
+        <p class="hero-desc">From business cards to large-format banners, HARDEZ delivers crisp, vibrant, and durable prints that get you noticed.</p>
+        <div class="hero-actions">
+          <a href="tel:08135776918" class="btn-primary"><i class="fas fa-phone-alt"></i> Call now</a>
+          <a href="#location" class="btn-outline"><i class="fas fa-map-marker-alt"></i> Visit us</a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="sign-card">
+          <div class="sign-icon"><i class="fas fa-print"></i></div>
+          <div class="sign-text">
+            <h4>Digital & Offset</h4>
+            <p>High-resolution prints</p>
+          </div>
+        </div>
+        <div class="sign-card">
+          <div class="sign-icon"><i class="fas fa-sign"></i></div>
+          <div class="sign-text">
+            <h4>3D Signs & Plaques</h4>
+            <p>Indoor & outdoor</p>
+          </div>
+        </div>
+        <div class="sign-card">
+          <div class="sign-icon"><i class="fas fa-truck-fast"></i></div>
+          <div class="sign-text">
+            <h4>Fast turnaround</h4>
+            <p>Same‑day options</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Info bar -->
+  <div class="info-bar">
+    <div class="container info-items">
+      <div class="info-item">
+        <i class="fas fa-phone-alt"></i>
+        <a href="tel:08135776918">0813 577 6918</a>
+      </div>
+      <div class="info-item">
+        <i class="fas fa-location-dot"></i>
+        <span>Agric Quarters, Mbesse Close, opposite Fidelity Bank, Area 7, Garki, Abuja</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Services -->
+  <section class="services">
+    <div class="container">
+      <h2 class="section-title">Everything print & signage</h2>
+      <p class="section-sub">We bring your brand to life with sharp, durable, and creative solutions.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-pen-fancy"></i></div>
+          <h3>Graphic Design</h3>
+          <p>Logos, flyers, brochures & complete brand identity kits designed to stand out.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-rectangle-ad"></i></div>
+          <h3>Large Format</h3>
+          <p>Banners, billboards, roll-ups, and vehicle wraps in vivid full colour.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-cube"></i></div>
+          <h3>3D Signs & Letters</h3>
+          <p>Acrylic, metal, and illuminated signs that give your storefront a premium look.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fas fa-business-time"></i></div>
+          <h3>Business Cards</h3>
+          <p>Premium cardstock, spot UV, and quick turnaround — make a lasting impression.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== IMAGE SLIDESHOW GALLERY ===== -->
+  <section class="gallery-section">
+    <div class="container">
+      <h2 class="section-title">Our work in focus</h2>
+      <p class="section-sub">A glimpse of the quality and creativity we deliver every day.</p>
+
+      <div class="gallery-container">
+        <div class="slideshow" id="slideshow">
+          <div class="slide active">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.55.02.jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.55.02%20(1).jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2018.01.53.jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.55.00.jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.59.38.jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.59.38%20(1).jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.55.00%20(1).jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.59.37.jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.54.59%20(1).jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.59.37%20(2).jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2012.06.23.jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.59.37%20(1).jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2012.05.09.jpeg" alt="HARDEZ print and signage project">
+          </div>
+          <div class="slide">
+            <img src="images/WhatsApp%20Image%202026-11-18%20at%2017.55.46.jpeg" alt="HARDEZ print and signage project">
+          </div>
+        </div>
+
+        <!-- Navigation buttons -->
+        <button class="slide-btn prev" id="prevBtn" aria-label="Previous slide"><i class="fas fa-chevron-left"></i></button>
+        <button class="slide-btn next" id="nextBtn" aria-label="Next slide"><i class="fas fa-chevron-right"></i></button>
+
+        <!-- Dots -->
+        <div class="slide-dots" id="dotsContainer">
+          <button class="dot active" data-index="0" aria-label="Go to slide 1"></button>
+          <button class="dot" data-index="1" aria-label="Go to slide 2"></button>
+          <button class="dot" data-index="2" aria-label="Go to slide 3"></button>
+          <button class="dot" data-index="3" aria-label="Go to slide 4"></button>
+          <button class="dot" data-index="4" aria-label="Go to slide 5"></button>
+          <button class="dot" data-index="5" aria-label="Go to slide 6"></button>
+          <button class="dot" data-index="6" aria-label="Go to slide 7"></button>
+          <button class="dot" data-index="7" aria-label="Go to slide 8"></button>
+          <button class="dot" data-index="8" aria-label="Go to slide 9"></button>
+          <button class="dot" data-index="9" aria-label="Go to slide 10"></button>
+          <button class="dot" data-index="10" aria-label="Go to slide 11"></button>
+          <button class="dot" data-index="11" aria-label="Go to slide 12"></button>
+          <button class="dot" data-index="12" aria-label="Go to slide 13"></button>
+          <button class="dot" data-index="13" aria-label="Go to slide 14"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== YOUTUBE VIDEO GALLERY ===== -->
+  <section class="video-section">
+    <div class="container">
+      <h2 class="section-title">Watch our process</h2>
+      <p class="section-sub">See how we bring ideas to life — from design to finished signage.</p>
+
+      <div class="video-grid">
+        <!-- Video 1 -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ?rel=0" 
+              title="Hardez Print & Signage showcase"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <h4>Signage Fabrication Showcase</h4>
+            <p><i class="fas fa-play-circle"></i> Watch how we craft stunning 3D signs</p>
+          </div>
+        </div>
+
+        <!-- Video 2 -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/9bZkp7q19f0?rel=0" 
+              title="Large format printing at Hardez"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <h4>Large Format Printing Process</h4>
+            <p><i class="fas fa-play-circle"></i> From file to finished banner</p>
+          </div>
+        </div>
+
+        <!-- Video 3 -->
+        <div class="video-card">
+          <div class="video-wrapper">
+            <iframe 
+              src="https://www.youtube.com/embed/kJQP7kiw5Fk?rel=0" 
+              title="Brand identity design by Hardez"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+            </iframe>
+          </div>
+          <div class="video-info">
+            <h4>Brand Identity Design</h4>
+            <p><i class="fas fa-play-circle"></i> Creating memorable brand experiences</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Location -->
+  <section id="location" class="location-section">
+    <div class="container location-grid">
+      <div class="location-text">
+        <h2>Visit our Abuja studio</h2>
+        <p style="color:#444; margin-bottom: 8px;">Conveniently located in Garki, Area 7 — opposite Fidelity Bank.</p>
+
+        <div class="address-block">
+          <div class="address-icon"><i class="fas fa-map-pin"></i></div>
+          <div class="address-details">
+            <p><strong>HARDEZ Print & Signage</strong></p>
+            <p>Agric Quarters, Mbesse Close,</p>
+            <p>Opposite Fidelity Bank, Area 7,</p>
+            <p>Garki, Abuja</p>
+          </div>
+        </div>
+
+        <div class="phone-block">
+          <div class="phone-icon"><i class="fas fa-phone-volume"></i></div>
+          <div>
+            <a href="tel:08135776918" class="phone-number">0813 577 6918</a>
+            <p style="color:#666; font-size:0.9rem; margin-top: 4px;">Call or WhatsApp for quick quotes</p>
+          </div>
+        </div>
+
+        <a href="tel:08135776918" class="btn-primary" style="margin-top: 10px;"><i class="fas fa-message"></i> Get a free quote</a>
+      </div>
+
+      <div class="map-visual">
+        <div class="map-placeholder">
+          <i class="fas fa-map-location-dot"></i> Mbesse Close, Garki
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="logo">HARDEZ <span>PRINT & SIGNAGE</span></div>
+      <div class="footer-contact">
+        <a href="tel:08135776918"><i class="fas fa-phone"></i> 0813 577 6918</a>
+        <a href="#location"><i class="fas fa-location-dot"></i> Agric Quarters, Mbesse Close, Garki</a>
+      </div>
+      <div class="copyright">
+        &copy; 2025 HARDEZ Print & Signage. All rights reserved.
+      </div>
+    </div>
+  </footer>
+
+  <!-- FLOATING WHATSAPP BUTTON -->
+  <a href="https://wa.me/2348135776918?text=Hello%20HARDEZ%20Print%20%26%20Signage%2C%20I%27d%20like%20to%20make%20an%20enquiry." 
+     class="whatsapp-float" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     aria-label="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+  </a>
+
+  <!-- ===== SLIDESHOW JAVASCRIPT ===== -->
+  <script>
+    (function() {
+      const slides = document.querySelectorAll('.slide');
+      const dots = document.querySelectorAll('.dot');
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+      let currentIndex = 0;
+      let slideInterval;
+
+      function goToSlide(index) {
+        // Wrap around
+        if (index < 0) index = slides.length - 1;
+        if (index >= slides.length) index = 0;
+
+        // Update slides
+        slides.forEach((slide, i) => {
+          slide.classList.toggle('active', i === index);
+        });
+
+        // Update dots
+        dots.forEach((dot, i) => {
+          dot.classList.toggle('active', i === index);
+        });
+
+        currentIndex = index;
+      }
+
+      function nextSlide() {
+        goToSlide(currentIndex + 1);
+      }
+
+      function prevSlide() {
+        goToSlide(currentIndex - 1);
+      }
+
+      // Auto-play
+      function startAutoPlay() {
+        slideInterval = setInterval(nextSlide, 5000); // 5 seconds
+      }
+
+      function resetAutoPlay() {
+        clearInterval(slideInterval);
+        startAutoPlay();
+      }
+
+      // Event listeners
+      nextBtn.addEventListener('click', () => {
+        nextSlide();
+        resetAutoPlay();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        prevSlide();
+        resetAutoPlay();
+      });
+
+      dots.forEach((dot, i) => {
+        dot.addEventListener('click', () => {
+          goToSlide(i);
+          resetAutoPlay();
+        });
+      });
+
+      // Pause on hover (optional)
+      const slideshowEl = document.getElementById('slideshow');
+      slideshowEl.addEventListener('mouseenter', () => clearInterval(slideInterval));
+      slideshowEl.addEventListener('mouseleave', startAutoPlay);
+
+      // Start auto-play
+      startAutoPlay();
+    })();
+  </script>
+
+</body>
+</html>
